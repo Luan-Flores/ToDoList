@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+body{
+    background-color: rgb(19, 6, 95);
+    color: white;
+    font-family: sans-serif;
+}
+form{
+    background-color: rgb(71, 36, 201);
+    padding: 10px 15px;
+    border-radius: 18px;
+    box-shadow: 0 4px 0 0 rgba(0, 0,0,.25);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#inputTarefa{
+    background-color:#9065f5;
+    border: none;
+    border-radius: 12px;
+    padding: 13px 10px;
+}
+#inputTarefa::placeholder{
+    color: white;
+}
+h1{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: max-content;
+    font-weight: 470;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(180deg, #484DA9, #292A46);
+    border-radius: 5px;
+    box-shadow: 0 4px 0 0 rgba(0, 0,0,.25);
+    z-index: -1;
+    bottom: 0%;
+    left: 0%;
+}
+form button{
+    background: linear-gradient(180deg, #484DA9, #292A46);
+    box-shadow: 0 4px 0 0 rgba(0, 0,0,.25);
+    border: none;
+    border-radius: 12px;
+}
+form button div{
+    width: 25px;
+    height: 8px;
+    background-color: white;
+    border-radius: 8px;
+}
+form button div:first-child{
+    rotate: 90deg;
+    position: relative;
+    top: 50%;
+    transform: translateX(-50%);
+}
+#listaTarefa{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+.tarefa{
+    padding: 12px 10px;
+    background-color: #484DA9;
+    border-radius: 18px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.tarefa > h2{
+    font-size: 16px;
+}
+.tarefa > button{
+    border: solid 4px;
+    border-radius: 4px;
+    background-color: white;
+    padding: 15px;
+    border-color: #979dff;
+}
+.tarefa.feito > button{
+    border-color: #48a953;
+    background-color:  #48a953;
+}
+.tarefa.nao-feito > button{
+    border-color: #c95151;
+    background-color: #c95151;
+}
+.tarefa.incompleto > button{
+    border-color: #dfd04f;
+    background-color:  #dfd04f;
+}
+#btnAddTarefa{
+    padding: 0px 8px;
+}
